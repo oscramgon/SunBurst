@@ -1,0 +1,1316 @@
+<!doctype html>
+<html class="zc-html">
+
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <style>
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+  </style>
+</head>
+​
+
+<body class="zc-body">
+  ​
+  <div id="myChart" class="chart--container">
+    <a href="https://www.zingchart.com/" rel="noopener" class="zc-ref">Powered by ZingChart</a>
+  </div>
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
+    // -----------------------------
+    let chartData = [{
+      id: 'madrid',
+      parent: '',
+      name: 'Madrid'
+    }, {
+      id: 'arganzuela',
+      parent: 'madrid',
+      name: 'Arganzuela'
+    }, {
+      id: 'barajas',
+      parent: 'madrid',
+      name: 'Barajas'
+    }, {
+      id: 'carabanchel',
+      parent: 'madrid',
+      name: 'Carabanchel'
+    }, {
+      id: 'centro',
+      parent: 'madrid',
+      name: 'Centro'
+    }, {
+      id: 'chamartin',
+      parent: 'madrid',
+      name: 'Chamartin'
+    }, {
+      id: 'chamberi',
+      parent: 'madrid',
+      name: 'Chamberi'
+    }, {
+      id: 'ciudadlineal',
+      parent: 'madrid',
+      name: 'Ciudad Lineal'
+    }, {
+      id: 'fuencarralelapardo',
+      parent: 'madrid',
+      name: 'Fuencarral-El Pardo'
+    }, {
+      id: 'hortaleza',
+      parent: 'madrid',
+      name: 'Hortaleza'
+    }, {
+      id: 'latina',
+      parent: 'madrid',
+      name: 'Latina'
+    }, {
+      id: 'moncloaaravaca',
+      parent: 'madrid',
+      name: 'Moncloa-Aravaca'
+    }, {
+      id: 'moratalaz',
+      parent: 'madrid',
+      name: 'Moratalza'
+    }, {
+      id: 'puentedevallecas',
+      parent: 'madrid',
+      name: 'Puente de Vallecas'
+    }, {
+      id: 'retiro',
+      parent: 'madrid',
+      name: 'Retiro'
+    }, {
+      id: 'salamanca',
+      parent: 'madrid',
+      name: 'Salamanca'
+    }, {
+      id: 'sanblas',
+      parent: 'madrid',
+      name: 'San Blas'
+    }, {
+      id: 'tetuan',
+      parent: 'madrid',
+      name: 'Tetuan'
+    }, {
+      id: 'usera',
+      parent: 'madrid',
+      name: 'Usera'
+    }, {
+      id: 'vicalvaro',
+      parent: 'madrid',
+      name: 'Vicalvaro'
+    }, {
+      id: 'villadevallecas',
+      parent: 'madrid',
+      name: 'Villa de Vallecas'
+    }, {
+      id: 'villaverde',
+      parent: 'madrid',
+      name: 'Villaverde'
+    }, {
+      id: 'arcd',
+      parent: 'arganzuela',
+      name: 'Colisión Doble',
+      value: 328
+    }, {
+      id: 'arcm',
+      parent: 'arganzuela',
+      name: 'Colisión Multiple',
+      value: 62
+    }, {
+      id: 'arcc',
+      parent: 'arganzuela',
+      name: 'Choque con Objeto Fijo',
+      value: 86
+    }, {
+      id: 'arat',
+      parent: 'arganzuela',
+      name: 'Atropello',
+      value: 57
+    }, {
+      id: 'arvu',
+      parent: 'arganzuela',
+      name: 'Vuelco',
+      value: 1
+    }, {
+      id: 'arcamo',
+      parent: 'arganzuela',
+      name: 'Caída Motocicleta',
+      value: 46
+    }, {
+      id: 'arcaci',
+      parent: 'arganzuela',
+      name: 'Caída Ciclomotor',
+      value: 12
+    }, {
+      id: 'arcabi',
+      parent: 'arganzuela',
+      name: 'Caída Bicicleta',
+      value: 10
+    }, {
+      id: 'arcavi',
+      parent: 'arganzuela',
+      name: 'Caída Viajero Bus',
+      value: 6
+    }, {
+      id: 'aroc',
+      parent: 'arganzuela',
+      name: 'Otras Causas',
+      value: 2
+    }, {
+      id: 'arca3r',
+      parent: 'arganzuela',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'bacd',
+      parent: 'barajas',
+      name: 'Colisión Doble',
+      value: 95
+    }, {
+      id: 'bacm',
+      parent: 'barajas',
+      name: 'Colisión Multiple',
+      value: 6
+    }, {
+      id: 'bacc',
+      parent: 'barajas',
+      name: 'Choque con Objeto Fijo',
+      value: 50
+    }, {
+      id: 'baat',
+      parent: 'barajas',
+      name: 'Atropello',
+      value: 34
+    }, {
+      id: 'bavu',
+      parent: 'barajas',
+      name: 'Vuelco',
+      value: 4
+    }, {
+      id: 'bacamo',
+      parent: 'barajas',
+      name: 'Caída Motocicleta',
+      value: 12
+    }, {
+      id: 'bacaci',
+      parent: 'barajas',
+      name: 'Caída Ciclomotor',
+      value: 2
+    }, {
+      id: 'bacabi',
+      parent: 'barajas',
+      name: 'Caída Bicicleta',
+      value: 4
+    }, {
+      id: 'bacavi',
+      parent: 'barajas',
+      name: 'Caída Viajero Bus',
+      value: 2
+    }, {
+      id: 'baoc',
+      parent: 'barajas',
+      name: 'Otras Causas',
+      value: 4
+    }, {
+      id: 'baca3r',
+      parent: 'barajas',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'cacd',
+      parent: 'carabanchel',
+      name: 'Colisión Doble',
+      value: 346
+    }, {
+      id: 'cacm',
+      parent: 'carabanchel',
+      name: 'Colisión Multiple',
+      value: 55
+    }, {
+      id: 'cacc',
+      parent: 'carabanchel',
+      name: 'Choque con Objeto Fijo',
+      value: 121
+    }, {
+      id: 'caat',
+      parent: 'carabanchel',
+      name: 'Atropello',
+      value: 106
+    }, {
+      id: 'cavu',
+      parent: 'carabanchel',
+      name: 'Vuelco',
+      value: 5
+    }, {
+      id: 'cacamo',
+      parent: 'carabanchel',
+      name: 'Caída Motocicleta',
+      value: 53
+    }, {
+      id: 'cacaci',
+      parent: 'carabanchel',
+      name: 'Caída Ciclomotor',
+      value: 18
+    }, {
+      id: 'cacabi',
+      parent: 'carabanchel',
+      name: 'Caída Bicicleta',
+      value: 7
+    }, {
+      id: 'cacavi',
+      parent: 'carabanchel',
+      name: 'Caída Viajero Bus',
+      value: 8
+    }, {
+      id: 'caoc',
+      parent: 'carabanchel',
+      name: 'Otras Causas',
+      value: 6
+    }, {
+      id: 'caca3r',
+      parent: 'carabanchel',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'cecd',
+      parent: 'centro',
+      name: 'Colisión Doble',
+      value: 444
+    }, {
+      id: 'cecm',
+      parent: 'centro',
+      name: 'Colisión Multiple',
+      value: 23
+    }, {
+      id: 'cecc',
+      parent: 'centro',
+      name: 'Choque con Objeto Fijo',
+      value: 172
+    }, {
+      id: 'ceat',
+      parent: 'centro',
+      name: 'Atropello',
+      value: 144
+    }, {
+      id: 'cevu',
+      parent: 'centro',
+      name: 'Vuelco',
+      value: 0
+    }, {
+      id: 'cecamo',
+      parent: 'centro',
+      name: 'Caída Motocicleta',
+      value: 97
+    }, {
+      id: 'cecaci',
+      parent: 'centro',
+      name: 'Caída Ciclomotor',
+      value: 11
+    }, {
+      id: 'cecabi',
+      parent: 'centro',
+      name: 'Caída Bicicleta',
+      value: 33
+    }, {
+      id: 'cecavi',
+      parent: 'centro',
+      name: 'Caída Viajero Bus',
+      value: 5
+    }, {
+      id: 'ceoc',
+      parent: 'centro',
+      name: 'Otras Causas',
+      value: 3
+    }, {
+      id: 'ceca3r',
+      parent: 'centro',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'chamacd',
+      parent: 'chamartin',
+      name: 'Colisión Doble',
+      value: 499
+    }, {
+      id: 'chamacm',
+      parent: 'chamartin',
+      name: 'Colisión Multiple',
+      value: 59
+    }, {
+      id: 'chamacc',
+      parent: 'chamartin',
+      name: 'Choque con Objeto Fijo',
+      value: 122
+    }, {
+      id: 'chamaat',
+      parent: 'chamartin',
+      name: 'Atropello',
+      value: 80
+    }, {
+      id: 'chamavu',
+      parent: 'chamartin',
+      name: 'Vuelco',
+      value: 5
+    }, {
+      id: 'chamacamo',
+      parent: 'chamartin',
+      name: 'Caída Motocicleta',
+      value: 105
+    }, {
+      id: 'chamacaci',
+      parent: 'chamartin',
+      name: 'Caída Ciclomotor',
+      value: 14
+    }, {
+      id: 'chamacabi',
+      parent: 'chamartin',
+      name: 'Caída Bicicleta',
+      value: 8
+    }, {
+      id: 'chamacavi',
+      parent: 'chamartin',
+      name: 'Caída Viajero Bus',
+      value: 5
+    }, {
+      id: 'chamaoc',
+      parent: 'chamartin',
+      name: 'Otras Causas',
+      value: 7
+    }, {
+      id: 'chamaca3r',
+      parent: 'chamartin',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'chambcd',
+      parent: 'chamberi',
+      name: 'Colisión Doble',
+      value: 382
+    }, {
+      id: 'chambcm',
+      parent: 'chamberi',
+      name: 'Colisión Multiple',
+      value: 26
+    }, {
+      id: 'chambcc',
+      parent: 'chamberi',
+      name: 'Choque con Objeto Fijo',
+      value: 53
+    }, {
+      id: 'chambat',
+      parent: 'chamberi',
+      name: 'Atropello',
+      value: 88
+    }, {
+      id: 'chambvu',
+      parent: 'chamberi',
+      name: 'Vuelco',
+      value: 0
+    }, {
+      id: 'chambcamo',
+      parent: 'chamberi',
+      name: 'Caída Motocicleta',
+      value: 63
+    }, {
+      id: 'chambcaci',
+      parent: 'chamberi',
+      name: 'Caída Ciclomotor',
+      value: 10
+    }, {
+      id: 'chambcabi',
+      parent: 'chamberi',
+      name: 'Caída Bicicleta',
+      value: 19
+    }, {
+      id: 'chambcavi',
+      parent: 'chamberi',
+      name: 'Caída Viajero Bus',
+      value: 1
+    }, {
+      id: 'chamboc',
+      parent: 'chamberi',
+      name: 'Otras Causas',
+      value: 5
+    }, {
+      id: 'chambca3r',
+      parent: 'chamberi',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'clcd',
+      parent: 'ciudadlineal',
+      name: 'Colisión Doble',
+      value: 411
+    }, {
+      id: 'clcm',
+      parent: 'ciudadlineal',
+      name: 'Colisión Multiple',
+      value: 57
+    }, {
+      id: 'clcc',
+      parent: 'ciudadlineal',
+      name: 'Choque con Objeto Fijo',
+      value: 119
+    }, {
+      id: 'clat',
+      parent: 'ciudadlineal',
+      name: 'Atropello',
+      value: 85
+    }, {
+      id: 'clvu',
+      parent: 'ciudadlineal',
+      name: 'Vuelco',
+      value: 4
+    }, {
+      id: 'clcamo',
+      parent: 'ciudadlineal',
+      name: 'Caída Motocicleta',
+      value: 75
+    }, {
+      id: 'clcaci',
+      parent: 'ciudadlineal',
+      name: 'Caída Ciclomotor',
+      value: 15
+    }, {
+      id: 'clcabi',
+      parent: 'ciudadlineal',
+      name: 'Caída Bicicleta',
+      value: 8
+    }, {
+      id: 'clcavi',
+      parent: 'ciudadlineal',
+      name: 'Caída Viajero Bus',
+      value: 5
+    }, {
+      id: 'cloc',
+      parent: 'ciudadlineal',
+      name: 'Otras Causas',
+      value: 8
+    }, {
+      id: 'clca3r',
+      parent: 'ciudadlineal',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'fuelcd',
+      parent: 'fuencarralelapardo',
+      name: 'Colisión Doble',
+      value: 345
+    }, {
+      id: 'fuelcm',
+      parent: 'fuencarralelapardo',
+      name: 'Colisión Multiple',
+      value: 30
+    }, {
+      id: 'fuelcc',
+      parent: 'fuencarralelapardo',
+      name: 'Choque con Objeto Fijo',
+      value: 132
+    }, {
+      id: 'fuelat',
+      parent: 'fuencarralelapardo',
+      name: 'Atropello',
+      value: 70
+    }, {
+      id: 'fuelvu',
+      parent: 'fuencarralelapardo',
+      name: 'Vuelco',
+      value: 6
+    }, {
+      id: 'fuelcamo',
+      parent: 'fuencarralelapardo',
+      name: 'Caída Motocicleta',
+      value: 56
+    }, {
+      id: 'fuelcaci',
+      parent: 'fuencarralelapardo',
+      name: 'Caída Ciclomotor',
+      value: 18
+    }, {
+      id: 'fuelcabi',
+      parent: 'fuencarralelapardo',
+      name: 'Caída Bicicleta',
+      value: 28
+    }, {
+      id: 'fuelcavi',
+      parent: 'fuencarralelapardo',
+      name: 'Caída Viajero Bus',
+      value: 3
+    }, {
+      id: 'fueloc',
+      parent: 'fuencarralelapardo',
+      name: 'Otras Causas',
+      value: 4
+    }, {
+      id: 'fuelca3r',
+      parent: 'fuencarralelapardo',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'hocd',
+      parent: 'hortaleza',
+      name: 'Colisión Doble',
+      value: 248
+    }, {
+      id: 'hocm',
+      parent: 'hortaleza',
+      name: 'Colisión Multiple',
+      value: 19
+    }, {
+      id: 'hocc',
+      parent: 'hortaleza',
+      name: 'Choque con Objeto Fijo',
+      value: 90
+    }, {
+      id: 'hoat',
+      parent: 'hortaleza',
+      name: 'Atropello',
+      value: 56
+    }, {
+      id: 'hovu',
+      parent: 'hortaleza',
+      name: 'Vuelco',
+      value: 5
+    }, {
+      id: 'hocamo',
+      parent: 'hortaleza',
+      name: 'Caída Motocicleta',
+      value: 33
+    }, {
+      id: 'hocaci',
+      parent: 'hortaleza',
+      name: 'Caída Ciclomotor',
+      value: 9
+    }, {
+      id: 'hocabi',
+      parent: 'hortaleza',
+      name: 'Caída Bicicleta',
+      value: 10
+    }, {
+      id: 'hocavi',
+      parent: 'hortaleza',
+      name: 'Caída Viajero Bus',
+      value: 1
+    }, {
+      id: 'hooc',
+      parent: 'hortaleza',
+      name: 'Otras Causas',
+      value: 1
+    }, {
+      id: 'hoca3r',
+      parent: 'hortaleza',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'lacd',
+      parent: 'latina',
+      name: 'Colisión Doble',
+      value: 288
+    }, {
+      id: 'lacm',
+      parent: 'latina',
+      name: 'Colisión Multiple',
+      value: 40
+    }, {
+      id: 'lacc',
+      parent: 'latina',
+      name: 'Choque con Objeto Fijo',
+      value: 119
+    }, {
+      id: 'laat',
+      parent: 'latina',
+      name: 'Atropello',
+      value: 104
+    }, {
+      id: 'lavu',
+      parent: 'latina',
+      name: 'Vuelco',
+      value: 3
+    }, {
+      id: 'lacamo',
+      parent: 'latina',
+      name: 'Caída Motocicleta',
+      value: 36
+    }, {
+      id: 'lacaci',
+      parent: 'latina',
+      name: 'Caída Ciclomotor',
+      value: 12
+    }, {
+      id: 'lacabi',
+      parent: 'latina',
+      name: 'Caída Bicicleta',
+      value: 11
+    }, {
+      id: 'lacavi',
+      parent: 'latina',
+      name: 'Caída Viajero Bus',
+      value: 7
+    }, {
+      id: 'laoc',
+      parent: 'latina',
+      name: 'Otras Causas',
+      value: 2
+    }, {
+      id: 'laca3r',
+      parent: 'latina',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'macd',
+      parent: 'moncloaaravaca',
+      name: 'Colisión Doble',
+      value: 294
+    }, {
+      id: 'macm',
+      parent: 'moncloaaravaca',
+      name: 'Colisión Multiple',
+      value: 61
+    }, {
+      id: 'macc',
+      parent: 'moncloaaravaca',
+      name: 'Choque con Objeto Fijo',
+      value: 182
+    }, {
+      id: 'maat',
+      parent: 'moncloaaravaca',
+      name: 'Atropello',
+      value: 54
+    }, {
+      id: 'mavu',
+      parent: 'moncloaaravaca',
+      name: 'Vuelco',
+      value: 12
+    }, {
+      id: 'macamo',
+      parent: 'moncloaaravaca',
+      name: 'Caída Motocicleta',
+      value: 68
+    }, {
+      id: 'macaci',
+      parent: 'moncloaaravaca',
+      name: 'Caída Ciclomotor',
+      value: 8
+    }, {
+      id: 'macabi',
+      parent: 'moncloaaravaca',
+      name: 'Caída Bicicleta',
+      value: 27
+    }, {
+      id: 'macavi',
+      parent: 'moncloaaravaca',
+      name: 'Caída Viajero Bus',
+      value: 2
+    }, {
+      id: 'maoc',
+      parent: 'moncloaaravaca',
+      name: 'Otras Causas',
+      value: 1
+    }, {
+      id: 'maca3r',
+      parent: 'moncloaaravaca',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'mocd',
+      parent: 'moratalaz',
+      name: 'Colisión Doble',
+      value: 150
+    }, {
+      id: 'mocm',
+      parent: 'moratalaz',
+      name: 'Colisión Multiple',
+      value: 31
+    }, {
+      id: 'mocc',
+      parent: 'moratalaz',
+      name: 'Choque con Objeto Fijo',
+      value: 53
+    }, {
+      id: 'moat',
+      parent: 'moratalaz',
+      name: 'Atropello',
+      value: 32
+    }, {
+      id: 'movu',
+      parent: 'moratalaz',
+      name: 'Vuelco',
+      value: 5
+    }, {
+      id: 'mocamo',
+      parent: 'moratalaz',
+      name: 'Caída Motocicleta',
+      value: 23
+    }, {
+      id: 'mocaci',
+      parent: 'moratalaz',
+      name: 'Caída Ciclomotor',
+      value: 5
+    }, {
+      id: 'mocabi',
+      parent: 'moratalaz',
+      name: 'Caída Bicicleta',
+      value: 2
+    }, {
+      id: 'mocavi',
+      parent: 'moratalaz',
+      name: 'Caída Viajero Bus',
+      value: 4
+    }, {
+      id: 'mooc',
+      parent: 'moratalaz',
+      name: 'Otras Causas',
+      value: 2
+    }, {
+      id: 'moca3r',
+      parent: 'moratalaz',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'pucd',
+      parent: 'puentedevallecas',
+      name: 'Colisión Doble',
+      value: 386
+    }, {
+      id: 'purcm',
+      parent: 'puentedevallecas',
+      name: 'Colisión Multiple',
+      value: 81
+    }, {
+      id: 'purcc',
+      parent: 'puentedevallecas',
+      name: 'Choque con Objeto Fijo',
+      value: 140
+    }, {
+      id: 'purat',
+      parent: 'puentedevallecas',
+      name: 'Atropello',
+      value: 118
+    }, {
+      id: 'purvu',
+      parent: 'puentedevallecas',
+      name: 'Vuelco',
+      value: 8
+    }, {
+      id: 'purcamo',
+      parent: 'puentedevallecas',
+      name: 'Caída Motocicleta',
+      value: 41
+    }, {
+      id: 'purcaci',
+      parent: 'puentedevallecas',
+      name: 'Caída Ciclomotor',
+      value: 11
+    }, {
+      id: 'purcabi',
+      parent: 'puentedevallecas',
+      name: 'Caída Bicicleta',
+      value: 11
+    }, {
+      id: 'purcavi',
+      parent: 'puentedevallecas',
+      name: 'Caída Viajero Bus',
+      value: 10
+    }, {
+      id: 'puroc',
+      parent: 'puentedevallecas',
+      name: 'Otras Causas',
+      value: 5
+    }, {
+      id: 'purca3r',
+      parent: 'puentedevallecas',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'recd',
+      parent: 'retiro',
+      name: 'Colisión Doble',
+      value: 344
+    }, {
+      id: 'recm',
+      parent: 'retiro',
+      name: 'Colisión Multiple',
+      value: 69
+    }, {
+      id: 'recc',
+      parent: 'retiro',
+      name: 'Choque con Objeto Fijo',
+      value: 63
+    }, {
+      id: 'reat',
+      parent: 'retiro',
+      name: 'Atropello',
+      value: 56
+    }, {
+      id: 'revu',
+      parent: 'retiro',
+      name: 'Vuelco',
+      value: 1
+    }, {
+      id: 'recamo',
+      parent: 'retiro',
+      name: 'Caída Motocicleta',
+      value: 67
+    }, {
+      id: 'recaci',
+      parent: 'retiro',
+      name: 'Caída Ciclomotor',
+      value: 9
+    }, {
+      id: 'recabi',
+      parent: 'retiro',
+      name: 'Caída Bicicleta',
+      value: 33
+    }, {
+      id: 'recavi',
+      parent: 'retiro',
+      name: 'Caída Viajero Bus',
+      value: 1
+    }, {
+      id: 'reoc',
+      parent: 'retiro',
+      name: 'Otras Causas',
+      value: 3
+    }, {
+      id: 'reca3r',
+      parent: 'retiro',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 1
+    }, {
+      id: 'salcd',
+      parent: 'salamanca',
+      name: 'Colisión Doble',
+      value: 467
+    }, {
+      id: 'salcm',
+      parent: 'salamanca',
+      name: 'Colisión Multiple',
+      value: 65
+    }, {
+      id: 'salcc',
+      parent: 'salamanca',
+      name: 'Choque con Objeto Fijo',
+      value: 111
+    }, {
+      id: 'salat',
+      parent: 'salamanca',
+      name: 'Atropello',
+      value: 112
+    }, {
+      id: 'salvu',
+      parent: 'salamanca',
+      name: 'Vuelco',
+      value: 1
+    }, {
+      id: 'salcamo',
+      parent: 'salamanca',
+      name: 'Caída Motocicleta',
+      value: 142
+    }, {
+      id: 'salcaci',
+      parent: 'salamanca',
+      name: 'Caída Ciclomotor',
+      value: 14
+    }, {
+      id: 'salcabi',
+      parent: 'salamanca',
+      name: 'Caída Bicicleta',
+      value: 22
+    }, {
+      id: 'salcavi',
+      parent: 'salamanca',
+      name: 'Caída Viajero Bus',
+      value: 14
+    }, {
+      id: 'saloc',
+      parent: 'salamanca',
+      name: 'Otras Causas',
+      value: 3
+    }, {
+      id: 'salca3r',
+      parent: 'salamanca',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'sancd',
+      parent: 'sanblas',
+      name: 'Colisión Doble',
+      value: 299
+    }, {
+      id: 'sancm',
+      parent: 'sanblas',
+      name: 'Colisión Multiple',
+      value: 20
+    }, {
+      id: 'sancc',
+      parent: 'sanblas',
+      name: 'Choque con Objeto Fijo',
+      value: 57
+    }, {
+      id: 'sanat',
+      parent: 'sanblas',
+      name: 'Atropello',
+      value: 68
+    }, {
+      id: 'sanvu',
+      parent: 'sanblas',
+      name: 'Vuelco',
+      value: 3
+    }, {
+      id: 'sancamo',
+      parent: 'sanblas',
+      name: 'Caída Motocicleta',
+      value: 34
+    }, {
+      id: 'sancaci',
+      parent: 'sanblas',
+      name: 'Caída Ciclomotor',
+      value: 6
+    }, {
+      id: 'sancabi',
+      parent: 'sanblas',
+      name: 'Caída Bicicleta',
+      value: 9
+    }, {
+      id: 'sancavi',
+      parent: 'sanblas',
+      name: 'Caída Viajero Bus',
+      value: 5
+    }, {
+      id: 'sanoc',
+      parent: 'sanblas',
+      name: 'Otras Causas',
+      value: 0
+    }, {
+      id: 'sanca3r',
+      parent: 'sanblas',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'tecd',
+      parent: 'tetuan',
+      name: 'Colisión Doble',
+      value: 330
+    }, {
+      id: 'tecm',
+      parent: 'tetuan',
+      name: 'Colisión Multiple',
+      value: 43
+    }, {
+      id: 'tecc',
+      parent: 'tetuan',
+      name: 'Choque con Objeto Fijo',
+      value: 70
+    }, {
+      id: 'teat',
+      parent: 'tetuan',
+      name: 'Atropello',
+      value: 91
+    }, {
+      id: 'tevu',
+      parent: 'tetuan',
+      name: 'Vuelco',
+      value: 0
+    }, {
+      id: 'tecamo',
+      parent: 'tetuan',
+      name: 'Caída Motocicleta',
+      value: 73
+    }, {
+      id: 'tecaci',
+      parent: 'tetuan',
+      name: 'Caída Ciclomotor',
+      value: 25
+    }, {
+      id: 'tecabi',
+      parent: 'tetuan',
+      name: 'Caída Bicicleta',
+      value: 13
+    }, {
+      id: 'tecavi',
+      parent: 'tetuan',
+      name: 'Caída Viajero Bus',
+      value: 5
+    }, {
+      id: 'teoc',
+      parent: 'tetuan',
+      name: 'Otras Causas',
+      value: 3
+    }, {
+      id: 'teca3r',
+      parent: 'tetuan',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'uscd',
+      parent: 'usera',
+      name: 'Colisión Doble',
+      value: 206
+    }, {
+      id: 'uscm',
+      parent: 'usera',
+      name: 'Colisión Multiple',
+      value: 27
+    }, {
+      id: 'uscc',
+      parent: 'usera',
+      name: 'Choque con Objeto Fijo',
+      value: 74
+    }, {
+      id: 'usat',
+      parent: 'usera',
+      name: 'Atropello',
+      value: 75
+    }, {
+      id: 'usvu',
+      parent: 'usera',
+      name: 'Vuelco',
+      value: 2
+    }, {
+      id: 'uscamo',
+      parent: 'usera',
+      name: 'Caída Motocicleta',
+      value: 16
+    }, {
+      id: 'uscaci',
+      parent: 'usera',
+      name: 'Caída Ciclomotor',
+      value: 2
+    }, {
+      id: 'uscabi',
+      parent: 'usera',
+      name: 'Caída Bicicleta',
+      value: 5
+    }, {
+      id: 'uscavi',
+      parent: 'usera',
+      name: 'Caída Viajero Bus',
+      value: 4
+    }, {
+      id: 'usoc',
+      parent: 'usera',
+      name: 'Otras Causas',
+      value: 1
+    }, {
+      id: 'usca3r',
+      parent: 'usera',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'vicd',
+      parent: 'vicalvaro',
+      name: 'Colisión Doble',
+      value: 70
+    }, {
+      id: 'vicm',
+      parent: 'vicalvaro',
+      name: 'Colisión Multiple',
+      value: 4
+    }, {
+      id: 'vicc',
+      parent: 'vicalvaro',
+      name: 'Choque con Objeto Fijo',
+      value: 38
+    }, {
+      id: 'viat',
+      parent: 'vicalvaro',
+      name: 'Atropello',
+      value: 22
+    }, {
+      id: 'vivu',
+      parent: 'vicalvaro',
+      name: 'Vuelco',
+      value: 4
+    }, {
+      id: 'vicamo',
+      parent: 'vicalvaro',
+      name: 'Caída Motocicleta',
+      value: 15
+    }, {
+      id: 'vicaci',
+      parent: 'vicalvaro',
+      name: 'Caída Ciclomotor',
+      value: 2
+    }, {
+      id: 'vicabi',
+      parent: 'vicalvaro',
+      name: 'Caída Bicicleta',
+      value: 3
+    }, {
+      id: 'vicavi',
+      parent: 'vicalvaro',
+      name: 'Caída Viajero Bus',
+      value: 2
+    }, {
+      id: 'vioc',
+      parent: 'vicalvaro',
+      name: 'Otras Causas',
+      value: 1
+    }, {
+      id: 'vica3r',
+      parent: 'vicalvaro',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'vivacd',
+      parent: 'villadevallecas',
+      name: 'Colisión Doble',
+      value: 149
+    }, {
+      id: 'vivacm',
+      parent: 'villadevallecas',
+      name: 'Colisión Multiple',
+      value: 7
+    }, {
+      id: 'vivacc',
+      parent: 'villadevallecas',
+      name: 'Choque con Objeto Fijo',
+      value: 42
+    }, {
+      id: 'vivaat',
+      parent: 'villadevallecas',
+      name: 'Atropello',
+      value: 54
+    }, {
+      id: 'vivavu',
+      parent: 'villadevallecas',
+      name: 'Vuelco',
+      value: 5
+    }, {
+      id: 'vivacamo',
+      parent: 'villadevallecas',
+      name: 'Caída Motocicleta',
+      value: 26
+    }, {
+      id: 'vivacaci',
+      parent: 'villadevallecas',
+      name: 'Caída Ciclomotor',
+      value: 4
+    }, {
+      id: 'vivacabi',
+      parent: 'villadevallecas',
+      name: 'Caída Bicicleta',
+      value: 4
+    }, {
+      id: 'vivacavi',
+      parent: 'villadevallecas',
+      name: 'Caída Viajero Bus',
+      value: 1
+    }, {
+      id: 'vivaoc',
+      parent: 'villadevallecas',
+      name: 'Otras Causas',
+      value: 3
+    }, {
+      id: 'vivaca3r',
+      parent: 'villadevallecas',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }, {
+      id: 'villacd',
+      parent: 'villaverde',
+      name: 'Colisión Doble',
+      value: 177
+    }, {
+      id: 'villacm',
+      parent: 'villaverde',
+      name: 'Colisión Multiple',
+      value: 11
+    }, {
+      id: 'villacc',
+      parent: 'villaverde',
+      name: 'Choque con Objeto Fijo',
+      value: 71
+    }, {
+      id: 'villat',
+      parent: 'villaverde',
+      name: 'Atropello',
+      value: 54
+    }, {
+      id: 'villavu',
+      parent: 'villaverde',
+      name: 'Vuelco',
+      value: 1
+    }, {
+      id: 'villacamo',
+      parent: 'villaverde',
+      name: 'Caída Motocicleta',
+      value: 8
+    }, {
+      id: 'villacaci',
+      parent: 'villaverde',
+      name: 'Caída Ciclomotor',
+      value: 5
+    }, {
+      id: 'villacabi',
+      parent: 'villaverde',
+      name: 'Caída Bicicleta',
+      value: 6
+    }, {
+      id: 'villacavi',
+      parent: 'villaverde',
+      name: 'Caída Viajero Bus',
+      value: 2
+    }, {
+      id: 'villaoc',
+      parent: 'villaverde',
+      name: 'Otras Causas',
+      value: 1
+    }, {
+      id: 'villaca3r',
+      parent: 'villaverde',
+      name: 'Caída Vehiculo 3 Ruedas',
+      value: 0
+    }];
+
+    // CHART CONFIG
+    // -----------------------------
+    let chartConfig = {
+      type: 'sunburst',
+      backgroundColor: '#fff',
+      borderColor: '#000',
+      borderWidth: '1px',
+      title: {
+        text: 'Accidentes por distrito en Madrid en el año 2020'
+      },
+      options: {},
+      plot: {
+        valueBox: {
+          text: '%data-vbtext',
+          fontSize: '10px',
+          visible: null
+        },
+        tooltipText: '<span style=\'font-size:19px\'>%plot-text</span><br/>Numero de accidentes: %node-value'
+      },
+      plotarea: {
+        margin: '40px 0px 0px 0px'
+      },
+      tooltip: {
+        align: 'left',
+        thousandsSeparator: ','
+      },
+      series: chartData
+    };
+
+    // RENDER CHARTS
+    // -----------------------------
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig,
+      output: 'svg'
+    });
+  </script>
+</body>
+
+</html>
+
